@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    networks:
+      - web
+    env_file:
+      - .env
+    environment:
+      UNSPLASH_KEY: ${UNSPLASH_KEY}
+      DROPBOX_KEY: ${DROPBOX_KEY}
+networks:
+  web:
